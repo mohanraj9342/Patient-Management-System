@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h2>Welcome, {{ patient['name'] }} (ID: {{ patient['id'] }})</h2>
+
+    <table>
+        <tr><th>Attribute</th><th>Value</th></tr>
+        <tr><td>Age</td><td>{{ patient['age'] }}</td></tr>
+        <tr><td>Gender</td><td>{{ patient['gender'] }}</td></tr>
+        <tr><td>Blood Group</td><td>{{ patient['blood_group'] }}</td></tr>
+        <tr><td>Phone Number</td><td>{{ patient['phone_number'] }}</td></tr>
+        <tr><td>Address</td><td>{{ patient['address'] }}</td></tr>
+        <tr><td>Disease</td><td>{{ patient['disease'] }}</td></tr>
+        <tr><td>Doctor Assigned</td><td>{{ patient['doctor_assigned'] }}</td></tr>
+        <tr><td>Admission Date</td><td>{{ patient['admission_date'] }}</td></tr>
+        <tr><td>Discharge Date</td><td>{{ patient['discharge_date'] or 'Not Discharged Yet' }}</td></tr>
+    </table>
+
+    <br>
+    <a href="/">Logout</a>
+</body>
+</html>
